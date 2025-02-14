@@ -1,16 +1,10 @@
+import { useState } from "react";
 import { useAuth } from "react-oidc-context";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Entry from "./Entry";
-import Neighbors from "./Neighbors";
-import Posts from "./Posts";
-import Map from "./Map";
-import Favorites from "./Favorites";
-import Messages from "./Messages";
-import Settings from "./Settings";
-import Profile from "./Profile";
 
 function App() {
   const auth = useAuth();
+  const [currentPage, setCurrentPage] = useState("neighbors"); // Default page
 
   // Display loading state while authentication is being checked
   if (auth.isLoading) {
@@ -25,19 +19,11 @@ function App() {
   // Redirect to Entry component if authenticated
   if (auth.isAuthenticated) {
     return (
-      <Router>
-        <Routes>
-          <Route path="/" element={<Entry auth={auth} />}>
-            <Route index element={<Neighbors />} /> {/* Default page */}
-            <Route path="posts" element={<Posts />} />
-            <Route path="map" element={<Map />} />
-            <Route path="favorites" element={<Favorites />} />
-            <Route path="messages" element={<Messages />} />
-          </Route>
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
-      </Router>
+      <Entry
+        auth={auth} // Now correctly passed as a prop
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
     );
   }
 

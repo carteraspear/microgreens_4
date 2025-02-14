@@ -108,3 +108,7 @@
   background-color: #fff;
   cursor: pointer;
 }
+.bottomButton.active {
+  background-color: #6b8e23; /* Green background for active button */
+  color: white;
+}
