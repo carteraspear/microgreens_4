@@ -1,5 +1,4 @@
 #root {
-  max-width: 1080px; /* Restrict the main content width */
   margin: 0 auto;
   padding: 0; /* Remove padding to allow full-width bars */
   text-align: center;
