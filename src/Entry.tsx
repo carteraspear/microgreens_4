@@ -25,7 +25,17 @@ const Entry: React.FC<EntryProps> = ({ auth }) => {
 
       {/* Main Content */}
       <div className="mainContent">
-        <Outlet /> {/* This will render the nested routes (e.g., Neighbors, Posts, etc.) */}
+        {/* Display Auth Information */}
+        <div className="authInfo">
+          <h2>User Information</h2>
+          <pre>Email: {auth.user?.profile.email}</pre>
+          <pre>ID Token: {auth.user?.id_token}</pre>
+          <pre>Access Token: {auth.user?.access_token}</pre>
+          <pre>Refresh Token: {auth.user?.refresh_token}</pre>
+        </div>
+
+        {/* Render Nested Routes (e.g., Neighbors, Posts, etc.) */}
+        <Outlet />
       </div>
 
       {/* Bottom Bar */}
