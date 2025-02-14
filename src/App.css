@@ -1,9 +1,9 @@
 /* Root container styles */
 #root {
   margin: 0 auto;
-  padding: 0; /* Remove padding to allow full-width bars */
+  padding: 0; 
   text-align: center;
-  height: 100vh; /* Ensure the root takes full viewport height */
+  height: 98vh; 
   display: flex;
   flex-direction: column;
 }
@@ -14,9 +14,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #0a1f3a; /* Dark blue background */
-  color: #ffffff; /* White text */
+  height: 98vh;
+  background-color: #d8d8d8; 
+  color: #000000; 
   font-family: Arial, sans-serif;
   text-align: center;
 }
