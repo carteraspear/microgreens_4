@@ -1,4 +1,5 @@
 import { useAuth } from "react-oidc-context";
+import Entry from "./Entry";
 
 function App() {
   const auth = useAuth();
@@ -20,18 +21,9 @@ function App() {
     return <div>Encountering error... {auth.error.message}</div>;
   }
 
-  // Display user information if authenticated
+  // Redirect to Entry component if authenticated
   if (auth.isAuthenticated) {
-    return (
-      <div>
-        <pre> Hello: {auth.user?.profile.email} </pre>
-        <pre> ID Token: {auth.user?.id_token} </pre>
-        <pre> Access Token: {auth.user?.access_token} </pre>
-        <pre> Refresh Token: {auth.user?.refresh_token} </pre>
-
-        <button onClick={() => auth.removeUser()}>Sign out</button>
-      </div>
-    );
+    return <Entry auth={auth} signOutRedirect={signOutRedirect} />;
   }
 
   // Display sign-in and sign-out buttons if not authenticated
