@@ -4,10 +4,9 @@ import "./App.css"; // Import the CSS file
 
 interface EntryProps {
   auth: ReturnType<typeof useAuth>;
-  signOutRedirect: () => void;
 }
 
-const Entry: React.FC<EntryProps> = ({ auth, signOutRedirect }) => {
+const Entry: React.FC<EntryProps> = ({ auth }) => {
   return (
     <div className="container">
       {/* Top Bar */}
@@ -26,9 +25,6 @@ const Entry: React.FC<EntryProps> = ({ auth, signOutRedirect }) => {
 
         <button onClick={() => auth.removeUser()} className="button">
           Sign out
-        </button>
-        <button onClick={signOutRedirect} className="button">
-          Sign out with redirect
         </button>
       </div>
 

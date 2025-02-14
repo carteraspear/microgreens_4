@@ -4,13 +4,6 @@ import Entry from "./Entry";
 function App() {
   const auth = useAuth();
 
-  const signOutRedirect = () => {
-    const clientId = "636n0k53unhepedavb4n0to27g"; // Your Cognito App Client ID
-    const logoutUri = "https://main.d1h95fg007nwlm.amplifyapp.com"; // Replace with your actual logout redirect URI
-    const cognitoDomain = "https://microgreens.auth.us-east-2.amazoncognito.com"; // Replace with your Cognito User Pool domain
-    window.location.href = `${cognitoDomain}/logout?client_id=${clientId}&logout_uri=${encodeURIComponent(logoutUri)}`;
-  };
-
   // Display loading state while authentication is being checked
   if (auth.isLoading) {
     return <div>Loading...</div>;
@@ -23,14 +16,13 @@ function App() {
 
   // Redirect to Entry component if authenticated
   if (auth.isAuthenticated) {
-    return <Entry auth={auth} signOutRedirect={signOutRedirect} />;
+    return <Entry auth={auth} />; // No longer passing signOutRedirect
   }
 
-  // Display sign-in and sign-out buttons if not authenticated
+  // Display sign-in button if not authenticated
   return (
     <div>
       <button onClick={() => auth.signinRedirect()}>Sign in</button>
-      <button onClick={() => signOutRedirect()}>Sign out</button>
     </div>
   );
 }
