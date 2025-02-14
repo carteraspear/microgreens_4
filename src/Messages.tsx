@@ -1,7 +1,7 @@
 import React from "react";
 
-const Posts: React.FC = () => {
+const Messages: React.FC = () => {
   return <div>MEssages Page</div>;
 };
 
-export default Posts;
+export default Messages;

@@ -3,7 +3,7 @@ import { AuthContextProps } from "react-oidc-context";
 import "./App.css";
 
 import Neighbors from "./Neighbors";
-import Posts from "./Posts";
+import Posts from "./PostsFeed";
 import MapPage from "./MapPage";
 import Favorites from "./Favorites";
 import Messages from "./Messages";

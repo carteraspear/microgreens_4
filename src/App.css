@@ -111,3 +111,11 @@
   background-color: #6b8e23; /* Green background for active button */
   color: white;
 }
+
+
+
+/* Ensure the map container takes up the full height and width */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}

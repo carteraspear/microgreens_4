@@ -1,7 +1,7 @@
 import React from "react";
 
-const Posts: React.FC = () => {
+const Settings: React.FC = () => {
   return <div>Settings Page</div>;
 };
 
-export default Posts;
+export default Settings;
