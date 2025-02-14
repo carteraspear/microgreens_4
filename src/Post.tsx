@@ -1,5 +1,5 @@
 import React from "react";
-import "./Post.css"; // Import CSS for styling
+import "./Posts.css"; // Import CSS for styling
 
 interface PostProps {
   username: string;
