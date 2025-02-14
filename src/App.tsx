@@ -1,4 +1,3 @@
-// App.tsx
 import { useAuth } from "react-oidc-context";
 
 function App() {
@@ -6,8 +5,8 @@ function App() {
 
   const signOutRedirect = () => {
     const clientId = "636n0k53unhepedavb4n0to27g"; // Your Cognito App Client ID
-    const logoutUri = "https://example.com"; // Replace with your actual logout redirect URI
-    const cognitoDomain = "https://<user pool domain>"; // Replace with your Cognito User Pool domain
+    const logoutUri = "https://main.d1h95fg007nwlm.amplifyapp.com"; // Replace with your actual logout redirect URI
+    const cognitoDomain = "https://microgreens.auth.us-east-2.amazoncognito.com"; // Replace with your Cognito User Pool domain
     window.location.href = `${cognitoDomain}/logout?client_id=${clientId}&logout_uri=${encodeURIComponent(logoutUri)}`;
   };
 
