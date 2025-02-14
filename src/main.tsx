@@ -13,7 +13,7 @@ if (!rootElement) {
 const root = createRoot(rootElement);
 
 const cognitoAuthConfig = {
-  authority: 'https://cognito-idp.us-east-2.amazonaws.com/us-east-2_XohcmASr2',
+  authority: 'https://cognito-idp.us-east-2.amazonaws.com/us-east-2_gbCs7pDOa',
   client_id: '636n0k53unhepedavb4n0to27g',
   redirect_uri: 'https://main.d1h95fg007nwlm.amplifyapp.com/', // Replace with your actual redirect URI
   response_type: 'code',
