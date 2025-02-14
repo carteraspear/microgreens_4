@@ -1,3 +1,4 @@
+/* Root container styles */
 #root {
   margin: 0 auto;
   padding: 0; /* Remove padding to allow full-width bars */
@@ -7,51 +8,69 @@
   flex-direction: column;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-/* New Styles for Top Bar, Main Content, and Bottom Bar */
+/* Container for the main content */
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
-  width: 100vw; /* Ensure the container spans the full viewport width */
-  margin: 0; /* Remove any default margin */
+  background-color: #0a1f3a; /* Dark blue background */
+  color: #ffffff; /* White text */
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
+/* Welcome text styling */
+.welcomeText {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Sign-in button styling */
+.signInButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #0a1f3a; /* Dark blue text */
+  background-color: #ffffff; /* White background */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the sign-in button */
+.signInButton:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+}
+
+/* Loading state container */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0a1f3a; /* Dark blue background */
+  color: #ffffff; /* White text */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Error state container */
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0a1f3a; /* Dark blue background */
+  color: #ffffff; /* White text */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Top Bar */
 .topBar {
   display: flex;
   justify-content: space-between;
@@ -79,6 +98,7 @@
   cursor: pointer;
 }
 
+/* Main content styling */
 .mainContent {
   flex: 1;
   padding: 20px;
@@ -89,6 +109,91 @@
   box-sizing: border-box; /* Include padding in the width */
 }
 
+/* Profile page specific styles */
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.profilePicContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+.profilePic {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+}
+
+.changePicButton {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #0a1f3a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.changePicButton:hover {
+  background-color: #f0f0f0;
+}
+
+.profileInfo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profileInfo h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.bioTextArea {
+  width: 100%;
+  max-width: 400px;
+  min-height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  resize: none;
+}
+
+.editProfileButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0a1f3a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.editProfileButton:hover {
+  background-color: #005a77;
+}
+
+/* Bottom Bar */
 .bottomBar {
   display: flex;
   justify-content: space-around;
@@ -107,12 +212,42 @@
   background-color: #fff;
   cursor: pointer;
 }
+
 .bottomButton.active {
   background-color: #6b8e23; /* Green background for active button */
   color: white;
 }
 
+/* Logo hover effects */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
 
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
 
 /* Ensure the map container takes up the full height and width */
 .leaflet-container {

@@ -1,0 +1,110 @@
+/* Root container styles */
+#root {
+  margin: 0 auto;
+  padding: 0; /* Remove padding to allow full-width bars */
+  text-align: center;
+  height: 100vh; /* Ensure the root takes full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container for the main content */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0a1f3a; /* Dark blue background */
+  color: #ffffff; /* White text */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Welcome text styling */
+.welcomeText {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Sign-in button styling */
+.signInButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #0a1f3a; /* Dark blue text */
+  background-color: #ffffff; /* White background */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the sign-in button */
+.signInButton:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+}
+
+/* Loading state container */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0a1f3a; /* Dark blue background */
+  color: #ffffff; /* White text */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Error state container */
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0a1f3a; /* Dark blue background */
+  color: #ffffff; /* White text */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Top Bar */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  width: 100%; /* Ensure the top bar spans the full width */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.searchInput {
+  flex: 1;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Main content styling */
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  width: 100%; /* Ensure the main content spans the full width */
+  max-width: 1280px; /* Restrict the main content width */
+  margin: 0 auto; /* Center the main content */
+  box-sizing: border-box; /* Include padding in the width */
+}
