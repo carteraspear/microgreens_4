@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuth } from "react-oidc-context";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import "./App.css";
 
 interface EntryProps {
