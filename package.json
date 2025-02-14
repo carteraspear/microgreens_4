@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "aws-amplify": "^6.13.0",
+    "oidc-client-ts": "^3.1.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-oidc-context": "^3.2.0"
   },
   "devDependencies": {
     "@aws-amplify/backend": "^1.14.1",
