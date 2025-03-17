@@ -1,4 +1,3 @@
-/* Root container styles */
 #root {
   margin: 0 auto;
   padding: 0; 
@@ -8,7 +7,7 @@
   flex-direction: column;
 }
 
-/* Container for the main content */
+/* container for main content */
 .container {
   display: flex;
   flex-direction: column;
@@ -21,56 +20,56 @@
   text-align: center;
 }
 
-/* Welcome text styling */
+/* welcome text styling */
 .welcomeText {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-/* Sign-in button styling */
+/* sign-in button styling */
 .signInButton {
   padding: 10px 20px;
   font-size: 1rem;
-  color: #0a1f3a; /* Dark blue text */
-  background-color: #ffffff; /* White background */
+  color: #0a1f3a; 
+  background-color: #ffffff; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-/* Hover effect for the sign-in button */
+/* hover effect for the sign-in button */
 .signInButton:hover {
-  background-color: #f0f0f0; /* Light gray on hover */
+  background-color: #f0f0f0; 
 }
 
-/* Loading state container */
+/* loading state container */
 .loadingContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #0a1f3a; /* Dark blue background */
-  color: #ffffff; /* White text */
+  background-color: #0a1f3a; 
+  color: #ffffff; 
   font-family: Arial, sans-serif;
   text-align: center;
 }
 
-/* Error state container */
+/* error state container */
 .errorContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #0a1f3a; /* Dark blue background */
-  color: #ffffff; /* White text */
+  background-color: #0a1f3a; 
+  color: #ffffff; 
   font-family: Arial, sans-serif;
   text-align: center;
 }
 
-/* Top Bar */
+/* top Bar */
 .topBar {
   display: flex;
   justify-content: space-between;
@@ -78,8 +77,8 @@
   padding: 10px;
   background-color: #f0f0f0;
   border-bottom: 1px solid #ccc;
-  width: 100%; /* Ensure the top bar spans the full width */
-  box-sizing: border-box; /* Include padding and border in the width */
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
 .searchInput {
@@ -98,18 +97,18 @@
   cursor: pointer;
 }
 
-/* Main content styling */
+/* main content styling */
 .mainContent {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
-  width: 100%; /* Ensure the main content spans the full width */
-  max-width: 1280px; /* Restrict the main content width */
-  margin: 0 auto; /* Center the main content */
-  box-sizing: border-box; /* Include padding in the width */
+  width: 100%; 
+  max-width: 1280px; 
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-/* Profile page specific styles */
+/* profile page specific styles */
 .profileContainer {
   display: flex;
   flex-direction: column;
@@ -193,7 +192,7 @@
   background-color: #005a77;
 }
 
-/* Bottom Bar */
+/* bottom Bar */
 .bottomBar {
   display: flex;
   justify-content: space-around;
@@ -201,8 +200,8 @@
   padding: 10px;
   background-color: #f0f0f0;
   border-top: 1px solid #ccc;
-  width: 100%; /* Ensure the bottom bar spans the full width */
-  box-sizing: border-box; /* Include padding and border in the width */
+  width: 100%; 
+  box-sizing: border-box;
 }
 
 .bottomButton {
@@ -214,11 +213,10 @@
 }
 
 .bottomButton.active {
-  background-color: #6b8e23; /* Green background for active button */
+  background-color: #6b8e23; 
   color: white;
 }
 
-/* Logo hover effects */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -249,7 +247,6 @@
   }
 }
 
-/* Ensure the map container takes up the full height and width */
 .leaflet-container {
   height: 100%;
   width: 100%;

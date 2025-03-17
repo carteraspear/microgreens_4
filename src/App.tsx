@@ -1,44 +1,44 @@
 import { useState } from "react";
 import { useAuth } from "react-oidc-context";
 import Entry from "./Entry";
-import styles from "./App.module.css"; // Import CSS as a module
+import styles from "./App.module.css"; 
 
 function App() {
   const auth = useAuth();
-  const [currentPage, setCurrentPage] = useState("neighbors"); // Default page
+  const [currentPage, setCurrentPage] = useState("neighbors"); 
 
-  // Display loading state while authentication is being checked
+  // display loading state while authentication is being checked
   if (auth.isLoading) {
     return (
-      <div className={styles.loadingContainer}> {/* Use className */}
+      <div className={styles.loadingContainer}> {}
         <h1 className={styles.welcomeText}>Welcome to Microgreens</h1>
         <div>Loading...</div>
       </div>
     );
   }
 
-  // Display error message if authentication fails
+  // display error message if authentication fails
   if (auth.error) {
     return (
-      <div className={styles.errorContainer}> {/* Use className */}
+      <div className={styles.errorContainer}> {}
         <h1 className={styles.welcomeText}>Welcome to Microgreens</h1>
         <div>Encountering error... {auth.error.message}</div>
       </div>
     );
   }
 
-  // Redirect to Entry component if authenticated
+  // redirect to entry if auth'd
   if (auth.isAuthenticated) {
     return (
       <Entry
-        auth={auth} // Now correctly passed as a prop
+        auth={auth} 
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
     );
   }
 
-  // Display sign-in button if not authenticated
+  // display sign-in button if not authenticated
   return (
     <div className={styles.container}> {/* Use className */}
       <h1 className={styles.welcomeText}>Welcome to Microgreens</h1>

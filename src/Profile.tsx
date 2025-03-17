@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import "./Profile.css"; // Import CSS for styling
-
+import "./Profile.css"; 
 const Profile: React.FC = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [username, setUsername] = useState("JohnDoe");
   const [bio, setBio] = useState("This is my bio.");
   const [profilePicture, setProfilePicture] = useState(
-    "https://via.placeholder.com/150" // Default profile picture
+    "https://via.placeholder.com/150" 
   );
 
-  // Handle edit/save button click
+  // handle edit/save button click
   const handleEditSaveClick = () => {
     if (isEditing) {
       // Save the changes (you can add an API call here to save the data)
@@ -18,7 +17,7 @@ const Profile: React.FC = () => {
     setIsEditing(!isEditing);
   };
 
-  // Handle profile picture change
+  // handle profile picture change
   const handleProfilePictureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -33,7 +32,7 @@ const Profile: React.FC = () => {
   return (
     <div className="profile-container">
       <div className="profile-card">
-        {/* Profile Picture */}
+        {/* profile picture */}
         <div className="profile-picture-container">
           <img
             src={profilePicture}
@@ -54,7 +53,7 @@ const Profile: React.FC = () => {
           )}
         </div>
 
-        {/* Username */}
+        {/* username */}
         <div className="profile-field">
           <label>Username</label>
           {isEditing ? (
@@ -68,7 +67,7 @@ const Profile: React.FC = () => {
           )}
         </div>
 
-        {/* Bio */}
+        {/* bio */}
         <div className="profile-field">
           <label>Bio</label>
           {isEditing ? (
@@ -81,7 +80,7 @@ const Profile: React.FC = () => {
           )}
         </div>
 
-        {/* Edit/Save Button */}
+        {/* edit/save button */}
         <button className="edit-save-button" onClick={handleEditSaveClick}>
           {isEditing ? "Save Profile" : "Edit Profile"}
         </button>

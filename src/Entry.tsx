@@ -17,7 +17,7 @@ interface EntryProps {
 }
 
 const Entry: React.FC<EntryProps> = ({ auth, currentPage, setCurrentPage }) => {
-  console.log(auth); // Ensures 'auth' is used to prevent TS warnings
+  console.log(auth); 
 
   const renderPage = () => {
     switch (currentPage) {
@@ -42,7 +42,7 @@ const Entry: React.FC<EntryProps> = ({ auth, currentPage, setCurrentPage }) => {
 
   return (
     <div className="container">
-      {/* Top Bar */}
+      {/* top Bar */}
       <div className="topBar">
         <button className="button" onClick={() => setCurrentPage("profile")}>
           Profile
@@ -53,10 +53,10 @@ const Entry: React.FC<EntryProps> = ({ auth, currentPage, setCurrentPage }) => {
         </button>
       </div>
 
-      {/* Main Content */}
+      {/* main Content */}
       <div className="mainContent">{renderPage()}</div>
 
-      {/* Bottom Bar */}
+      {/* bottom Bar */}
       <div className="bottomBar">
         <button
           className={`bottomButton ${currentPage === "neighbors" ? "active" : ""}`}
